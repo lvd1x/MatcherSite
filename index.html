@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="respRaicesStyler.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>RaicesMatcher</title>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+  		<div class="container-fluid">
+    		<!-- <div class="navbar-header">
+      			<a class="navbar-brand" href="#">Section</a>
+    		</div> -->
+		    <ul class="nav navbar-nav">
+		      <li><a href="#about">About</a></li>
+		      <li><a href="#steps">Steps</a></li>
+		      <li><a href="#file-format">File Format</a></li>
+		      <li><a href="#file-drop">File Drop</a></li>
+		    </ul>
+  		</div>
+	</nav>
+
+	<div class="container-fluid jumbotron text-center">
+		<img src="images/raicesImg/raicesCropped.png" style="width:220px;height:220px;float:left;">
+		<h1>Welcome to Phase One of the RaicesMatcher Project!</h1>
+	</div>
+
+	<div class="container-fluid about" id="about">
+		<div class="row">
+			<div class="col-sm-8 intro-left well">
+				<h3>About</h3>
+				<p>RaicesMatcher is an algorithm that matches newly admitted students with a host for senior weekend. The project was concieved with the goal of automating the processes of pairing host with students and analyzing data. This is phase one and will take in two CSV files: one of the potential host and another of the incoming students. The files should be dropped into the degsingated area and the RUN bottom should be pressed. The output file will be a CSV of the pairings. Below are the three high level steps of the process.</p>
+			</div>
+			<div class="col-sm-4">
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="container steps" id="steps">
+		<div class="row">
+			<div class="col-sm-4 clearfix" style="border-right:solid;height:300px;">
+				<h3>STEP 1</h3>
+				<p>Collect the data from incoming students and potential host in two CSV files.</p>
+				<img src="images/diagrams/diagramOneColor.png" style="width:150px;height:125px;margin-left:60px;margin-top:25px;">
+			</div>
+			<div class="col-sm-4 clearfix" style="border-right:solid;height:300px;">
+				<h3>STEP 2</h3>
+				<p>Drag and drop the files into the drop section of the site and let the magic happen!</p>
+				<img src="images/diagrams/diagramTwoColor.png" style="width:250px;height:150px;margin-left:50px;margin-top:20px;">
+			</div>
+			<div class="col-sm-4 clearfix" style="height:300px;">
+				<h3>STEP 3</h3>
+				<p>Download the output CSV file of the pairings into your computer.</p>
+				<img src="images/diagrams/diagramThreeLarge.png" style="width:250px;height:150px;margin-left:50px;margin-top:20px;">
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid file-format" id="file-format">
+		<div class="row">
+			<div class="col-sm-4">
+
+			</div>
+			<div class="col-sm-8 well">
+				<h3>File Format</h3>
+				<p class="bg-warning">In order for the matching algorithm to properly function, the following formatting rules must be followed! Failure to obey the rules will result in an error during the matching process.</p>
+				<ul>
+					<li>Commas must be removed from within all cells.</li>
+					<li><kbd>Enter</kbd> must never be used inside a cell.</li>
+					<li>The Host and Student files must follow the format of the examples given.</li>
+					<li>The host file should be named host.csv</li>
+					<li>The student file shoud be named students.csv</li>
+				</ul>
+				<p>Examples of properly formated files are shown below.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h4 style="margin-top:25px;">Host CSV format:</h4>
+		<table class="table table-bordered well" style="margin-bottom:50px;">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Location</th>
+					<th>Pronouns</th>
+					<th>Accom 1</th>
+					<th>Accom 2</th>
+					<th>Accom 3</th>
+					<th>Capacity</th>
+					<th>Comments</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>first 1</td>
+					<td>last 1</td>
+					<td>host1@gmail.com</td>
+					<td>Los Angeles</td>
+					<td>Her She Ella</td>
+					<td>TRUE</td>
+					<td>TRUE</td>
+					<td>FALSE</td>
+					<td>2</td>
+					<td>Excited to be a host!</td>
+				</tr>
+				<tr>
+					<td>first 2</td>
+					<td>last 2</td>
+					<td>host2@gmail.com</td>
+					<td>Oakland</td>
+					<td>He His Him</td>
+					<td>FALSE</td>
+					<td>TRUE</td>
+					<td>FALSE</td>
+					<td>3</td>
+					<td>Can't Wait!</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h4>Student CSV format:</h4>
+		<table class="table table-bordered well" style="margin-bottom:50px;">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Pronouns</th>
+					<th>Location</th>
+					<th>Comments</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>first 1</td>
+					<td>last 1</td>
+					<td>student1@gmail.com</td>
+					<td>Her she</td>
+					<td>Oakland</td>
+					<td>Excited to see campus!</td>
+				</tr>
+				<tr>
+					<td>first 2</td>
+					<td>last 2</td>
+					<td>student2@gmail.com</td>
+					<td>He His Him</td>
+					<td>Fresno</td>
+					<td>Can't Wait! also would like accom 1</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="container file-drop" id="file-drop">
+		<div class="row">
+			<div class="col-sm-2">
+				
+			</div>
+			<div class="col-sm-8">
+				<h3 style="text-align:center;">File Drop</h3>
+			</div>
+			<div class="col-sm-2">
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 well" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+ 				 <p>Drag one or more files to this Drop Zone ...</p>
+			</div>
+		</div>
+	</div>
+
+	<section class="footer">
+		<div class="container-fluid" style="background-color:grey;">
+			<p>This is the footer section</p>
+		</div>
+	</section>
+</body>
+</html>
